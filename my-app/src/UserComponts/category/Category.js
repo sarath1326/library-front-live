@@ -30,6 +30,8 @@ function Category(props) {
 
   const navigate = useNavigate();
 
+  axios.defaults.withCredentials = true;
+
 
   function btn() {
 

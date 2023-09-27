@@ -19,6 +19,8 @@ import { useDispatch } from "react-redux";
 import { AddCart } from '../../redux/cart/Cart';
 import {message} from "antd"
 
+axios.defaults.withCredentials = true;
+
 
 
 function Navbars(props) {
@@ -79,6 +81,8 @@ function Navbars(props) {
 
       // message.error("smothing worng. check your connection ");
       props.failed(true)
+
+      console.log("errrrrrr",err.message)
 
     })
 

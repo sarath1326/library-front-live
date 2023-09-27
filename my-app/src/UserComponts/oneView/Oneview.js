@@ -12,6 +12,8 @@ import { useDispatch } from "react-redux";
 import { AddCart } from '../../redux/cart/Cart';
 import { message } from "antd";
 
+axios.defaults.withCredentials = true;
+
 
 function Oneview(props) {
 
