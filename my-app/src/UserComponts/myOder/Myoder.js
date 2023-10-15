@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from "../../Constant/Axios";
 import { useEffect, useState } from 'react';
 import {message} from "antd";
+import { GiRoundStar } from "react-icons/gi";
+import { FaCircleDot } from "react-icons/fa6";
 
 
 
@@ -112,67 +114,54 @@ function Myoder(props) {
               :
 
 
-
-              <div className='myoder-item'>
-
-                <Table striped bordered hover>
+             <div className='myoder-main-new'>
 
 
-                  <thead>
-                    <tr>
+              {
+
+                fetchdata.map((obj)=>(
 
 
-                      <th>Delevery Date</th>
-                      <th>Price</th>
-                      <th> Payment type</th>
-                      <th>Status</th>
-                      <th> View product</th>
-                    </tr>
-                  </thead>
 
+                  <div className='bill-box-new'>
 
-                  <tbody>
+                  <span className='span-status'> Status: {obj.status} <FaCircleDot style={{color:obj.status==="pending"? "red" : "green",fontSize:"15"}} /> </span><br/>
+                 
+                  <span className='span-other-new'>  Delevary Date:</span> <span className='span-ans'>{obj.delevary_date}</span><br/>
+                 
+                  <span  className='span-other-new'>  Pay Amount:{obj.totalAmount}</span><br/>
+                  
+                  <span  className='span-other-new'>  Payment Type: {obj.pyment_method}</span><br/>
 
-                    {
-
-                      fetchdata.map((obj) =>
-
-                      (
-
-                        <tr>
-
-
-                          <td className='td-myoder'>{obj.delevary_date}</td>
-
-                          <td className='td-myoder'>{obj.totalAmount}</td>
-
-                          <td className='td-myoder'>{obj.pyment_method}</td>
-
-                          <td className='td-myoder'>{obj.status}</td>
-
-                          <td className='td-myoder'> <button className='view-btn' onClick={() => { view_pro(obj._id) }}  > View product</button></td>
-
-                        </tr>
+                  <button className='btn-bill'  onClick={() => { view_pro(obj._id) }}   > View</button>
+                  
+                  
+                  </div>
 
 
 
 
-                      )
 
-                      )
+                ))
 
-
-
-                    }
+              }
 
 
-                  </tbody>
-                </Table>
+                  
 
 
 
 
-              </div>
+
+
+
+
+
+
+             </div>
+
+
+
 
 
 

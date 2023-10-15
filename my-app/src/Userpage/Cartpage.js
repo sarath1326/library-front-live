@@ -25,7 +25,7 @@ function Cartpage() {
 
       <>
 
-      <Navbars failed={setfailed}   />
+     <Navbars failed={setfailed}   />
      
       <Cart failed={setfailed}  />
 

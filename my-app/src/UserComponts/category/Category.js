@@ -6,6 +6,7 @@ import React from 'react'
 import "./Category.css"
 import { useState, useEffect } from 'react';
 import { BiFilterAlt } from "react-icons/bi"
+import { AiFillStar } from "react-icons/ai";
 import Dropdown from 'react-bootstrap/Dropdown';
 import axios from "../../Constant/Axios"
 import { useNavigate, useParams } from 'react-router-dom';
@@ -273,7 +274,7 @@ function Category(props) {
 
                     <h6 className='booktitle'> {obj.name}</h6>
                     <span className='language'>Language:</span><span className='language'> {obj.language}</span><br/>
-                    <span className='span-rating'> {obj.rating}</span><span > ⭐</span>
+                    <span className='span-rating'> {obj.rating}</span><span ><AiFillStar className='starrating' /></span>
                   
 
                   </div>

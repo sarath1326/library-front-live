@@ -6,8 +6,10 @@ import "./Rowhome.css"
 import { useEffect, useState } from 'react';
 import axios from "../../Constant/Axios";
 import { useNavigate } from "react-router-dom";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowRight ,AiFillStar } from "react-icons/ai";
 import {message} from "antd";
+
+
 
 
 axios.defaults.withCredentials = true;
@@ -46,6 +48,9 @@ function Rowhome(props) {
 
   useEffect(() => {
 
+  
+
+
     axios(props.url).then((respo) => {
 
       if(respo.data.err){
@@ -64,8 +69,13 @@ function Rowhome(props) {
         
       }
 
+    
       setfetchdata(result.data);
       setloding(false);
+        
+
+      
+      
 
     }).catch(err => {
 
@@ -95,7 +105,7 @@ function Rowhome(props) {
 
           {
 
-            loging ? null
+            loging ? <h1> helooo </h1>
 
               :
 
@@ -129,7 +139,10 @@ function Rowhome(props) {
 
                       <h6 className='booktitle'> {obj.name}</h6>
                       <span className='span-row' >Language:</span><span className='span-row' > {obj.language}</span> <br/>
-                      <span> <span className='rating-row'> {obj.rating}  </span> ⭐</span>
+                      <span> <span className='rating-row'> {obj.rating} <AiFillStar className='starrating' />       </span> </span>
+                     
+                     
+                    
 
 
                     </div>

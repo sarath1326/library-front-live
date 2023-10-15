@@ -3,6 +3,7 @@
     width: 100%;
     height: 100vh;
     /* background-color: rgb(150, 194, 145); */
+    /* background-color: white; */
     background-color: white;
 }
 
@@ -15,6 +16,10 @@
    
 }
 
+.img-td{
+    width: 500px;
+}
+
 .cart-icon{
     font-size: 20px;
     text-align: center;
@@ -23,6 +28,7 @@
 
 .icom{
     color: rgb(212, 51, 51);
+    margin-left: 50px;
 }
 
 .cart-img{
@@ -49,6 +55,7 @@
     color: white;
     font-size: 20px;
     border:none;
+    margin-left: 25px;
    
 }
 
@@ -152,6 +159,104 @@
 
 
 
+
+
+
+.cart-box-main{
+
+      width: 600px;
+      height: 200px;
+      background-color: rgb(248, 236, 236);
+      margin-left: 300px;
+      padding-top: 20px;
+      padding-left: 20px;
+      display: flex;
+      margin-bottom: 10px;
+
+
+      
+}
+
+@media (max-width:1000px){
+    .cart-box-main{
+
+        margin-left: 50px;
+    }
+}
+
+
+
+@media(max-width:500px){
+
+    .cart-box-main{
+        width: 370px;
+        margin-left:0;
+    }
+}
+
+
+
+
+
+
+.img-new{
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.cart-img-box-new{
+
+     width: 150px;
+     height: 150px;
+    
+     
+    
+
+}
+
+.text-box-new{
+
+     width: 300px;
+     height: 130px;
+    
+     margin-left: 30px;
+}
+
+
+.cart-title-new{
+    text-align: center;
+    font-size: 20px;
+}
+
+.rating-span-new{
+    margin-left: 10px;
+}
+
+.cart-price-new{
+
+    margin-left: 10px;
+}
+
+.cart-btn1-new{
+
+    margin-left: 60px;
+    border: none;
+    background-color: rgb(7, 167, 167);
+    border-radius: 10px;
+    color: white;
+}
+
+
+.cart-btn2-new{
+
+    border: none;
+    background-color: rgb(7, 167, 167);
+    border-radius: 10px;
+    color: white;
+
+}
 
 
 

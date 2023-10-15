@@ -15,7 +15,7 @@ function Oneview2page() {
             :
             <>  
 
-            <Navbars failed={setfailed} />
+           <Navbars failed={setfailed} /> 
             <Oneview2 failed={setfailed} />
 
             </>

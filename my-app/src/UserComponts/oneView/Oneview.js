@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { AddCart } from '../../redux/cart/Cart';
 import { message } from "antd";
+import { AiFillStar } from "react-icons/ai";
 
 axios.defaults.withCredentials = true;
 
@@ -147,7 +148,7 @@ function Oneview(props) {
                 <div class="main-oneview">
                   <div class="img-oneview">
                     <img className='item-img-oneview' src={`data:${data.contentType};base64,${data.imageBase64}`} alt="" />
-                    <span className='span-rating' > {data.rating}</span><span > ⭐</span>
+                    <span className='span-rating' > {data.rating}</span><span ><AiFillStar className='starrating' />  </span>
 
                   </div>
 

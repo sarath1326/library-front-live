@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Routes,Route}from "react-router-dom"
 
 
+import Navbars from './UserComponts/navbar/Navbars';
 import Homepage from './Userpage/Homepage';
 import Cartpage from './Userpage/Cartpage';
 import Myoderpage from './Userpage/Myoderpage';
@@ -81,7 +82,7 @@ function App() {
       <Username>
      <View>
 
-      
+      {/* <Navbars /> */}
 
       <Routes>
 

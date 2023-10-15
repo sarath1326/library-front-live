@@ -13,6 +13,8 @@ import { useDispatch } from "react-redux";
 import { AddCart } from "../../redux/cart/Cart";
 import { message } from "antd";
 import AnimatedNumbers from "react-animated-numbers";
+import { AiFillStar } from "react-icons/ai";
+import { FaRupeeSign} from "react-icons/fa"
 
 
 
@@ -27,6 +29,7 @@ function Cart(props) {
 
   const [empty, setempty] = useState(false);
   const [loding, setloding] = useState(true);
+
 
 
 
@@ -302,85 +305,89 @@ function Cart(props) {
 
               <div className='cart-item'>
 
-                <Table striped bordered hover className='table-cart'>
-
-                  <tbody>
 
 
+                   {
 
-                    {
-
-                      cartdata.map((obj, index) => (
-
+                    cartdata.map((obj,index)=>(
 
 
+                         <div className='cart-box-main'>
 
-                        <tr className='tr-cart'>
+                          <div className='cart-img-box-new'> 
 
-                          <td > <img src={`data:${obj.cartitems.contentType};base64,${obj.cartitems.imageBase64}`} alt='Loading....' className='cart-img' /> </td>
+                             <img className='img-new' src={`data:${obj.cartitems.contentType};base64,${obj.cartitems.imageBase64}`} alt='loging...' />
 
-                          <td className='cart-td'>{obj.cartitems.name} <br /><br />
-
-                            <a className='tda-cart' onClick={() => { more_view(obj.cartitems._id) }}   > view</a>
-
-                          </td>
-
-                          <td className='cart-td'>
+                          </div>
 
 
+                           <div className='text-box-new'>
 
-                            <br />
+                            <p className='cart-title-new'> {obj.cartitems.name}   </p>
 
-                         <span className='item-price'>  {obj.cartitems.price} /- </span>   
+                            <span className='rating-span-new'> {obj.cartitems.rating} <AiFillStar className='starrating' />  </span> 
 
-
-                          </td>
-
-                          <td className='btn-td' >
-
-                            <br />
-
-                            <button className='cart-btn' onClick={() => { countdecriment(index, obj.item) }}       > - </button >
-
-
-
+                            <button className='cart-btn1-new' onClick={() => { countdecriment(index, obj.item) }}       > - </button >
 
                             <span> {obj.quantity}     </span>
 
-
-
-
-
-                            <button className='cart-btn' onClick={() => { countincriment(index, obj.item) }}       >+</button>
-
-
-
-                          </td>
-
-                          <td className='cart-icon' >
-
-                            <br />
+                            <button className='cart-btn2-new' onClick={() => { countincriment(index, obj.item) }}       >+</button><br/><br/>
+                            
+                            <FaRupeeSign className='cart-price-new' /> <span> {obj.cartitems.price}</span>
 
                             <BsFillTrash3Fill className='icom' onClick={() => { pro_delete(index, obj.item) }} />
 
 
 
-                          </td>
-
-                        </tr>
 
 
 
-                      ))
 
 
 
-                    }
 
-                  </tbody>
 
-                </Table>
 
+
+                           
+
+
+
+
+
+                           </div>
+
+                            
+                          
+                          
+                          
+                          
+                          
+                          
+                           </div>
+
+
+                    
+
+
+
+                    ))
+
+
+
+                   }
+
+
+
+
+               
+              
+              
+              
+              
+              
+              
+              
               </div>
 
             </>}

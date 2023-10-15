@@ -119,6 +119,97 @@
 
 
 
+.myoder-main-new{
+
+   
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+}
+
+
+.bill-box-new{
+
+    width: 400px;
+    height: 150px;
+    background-color: rgb(224, 224, 224);
+    color: black;
+    border: 1px ridge black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.span-status{
+    margin-left: 200px;
+}
+
+.cercil-new{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    
+    
+}
+
+
+.btn-bill{
+
+    margin-top: 5px;
+    margin-left: 250px;
+    width: 100px;
+    height: 30px;
+    border: none;
+
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    
+    
+}
+.span-other-new{
+
+    margin-left: 10px;
+
+}
+
+.span-ans{
+    color: blue;
+}
+
+@media(min-width:600px){
+
+    .bill-box-new{
+        width: 600px;
+    }
+    .span-status{
+        margin-left: 400px;
+    }
+    .btn-bill{
+        margin-left: 450px;
+    }
+
+    .span-other-new{
+       color: black;
+       margin-left:50px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
