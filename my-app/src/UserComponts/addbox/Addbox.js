@@ -26,7 +26,7 @@ function Addbox() {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundSize: 'cover',
-    height: '300px',
+    // height: '200px',
     // width:'100%'
   }
 
@@ -143,7 +143,7 @@ function Addbox() {
             {image.map((obj, index) => (
               <div key={index}>
 
-                <div style={{ ...divStyle  }}>
+                <div className='divStyle'>
 
                 
                 <img className='image-add-set' src={`data:${obj.contentType};base64,${obj.imageBase64}`}  alt='loding...' />
